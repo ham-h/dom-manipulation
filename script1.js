@@ -20,8 +20,7 @@ divElement.style.border = "1px solid #ccc";
 divElement.style.borderRadius = "5px";
 divElement.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.1)";
 divElement.style.margin = "30px";
-// let textNode= document.createTextNode('this is newly created div element')//add text content to div element
-// divElement.appendChild(textNode);
+
 divElement.innerHTML = "<h2>Add Employee</h2>";
 let formElement = `<form>
 <input type="text" id="name" placeholder="Enter Your Name">
@@ -64,7 +63,7 @@ function addEmployee() {
     // collect form data
     let name = document.getElementById('name').value;
     let designation = document.getElementById('designation').value;
-    // let role = document.getElementById('role').value;
+    
     let roleSelect = document.getElementById('role');
     let role = roleSelect.options[roleSelect.selectedIndex].text;
     let gender = document.querySelector('input[name="employeeGender"]:checked').value;
@@ -97,9 +96,6 @@ function addEmployee() {
     // Add the content to employee table
     employeeDiv.insertAdjacentHTML('beforeend', employeeDetails);
 
-    // Add event listener for the last added "Remove" button
-    // let lastRemoveButton = employeeDiv.querySelector('.remove-card:last-child');
-    // lastRemoveButton.addEventListener('click', removeInput);
     let removeButtons = document.querySelectorAll('.remove-card');
     removeButtons.forEach(button => {
         button.addEventListener('click', removeInput);
@@ -108,6 +104,5 @@ function addEmployee() {
     lastRegisterButton.addEventListener('click', redirectToNewPage);
 }
 function redirectToNewPage() {
-    // Redirect to another webpage
-    window.location.href = "indexxx.html"; // Replace "newPage.html" with the URL of the page you want to redirect to
-}
+    
+    window.location.href = "indexxx.html"; }

@@ -109,5 +109,5 @@ function addEmployee() {
 }
 function redirectToNewPage() {
     // Redirect to another webpage
-    window.location.href = "index.html"; // Replace "newPage.html" with the URL of the page you want to redirect to
+    window.location.href = "indexxx.html"; // Replace "newPage.html" with the URL of the page you want to redirect to
 }
